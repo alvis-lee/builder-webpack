@@ -6,12 +6,12 @@ describe('webpack.base.js test case', () => {
 
   it('entry', () => {
     assert.equal(
-      baseConfig.entry.index,
-      'D:/桌面/webpack-demo/webpack-demo/builder-webpack/test/smoke/template/src/index/index.js',
+      baseConfig.entry.index.indexOf('builder-webpack/test/smoke/template/src/index/index.js') > -1,
+      true,
     );
     assert.equal(
-      baseConfig.entry.search,
-      'D:/桌面/webpack-demo/webpack-demo/builder-webpack/test/smoke/template/src/search/index.js',
+      baseConfig.entry.search.indexOf('builder-webpack/test/smoke/template/src/search/index.js') > -1,
+      true,
     );
   });
 });
