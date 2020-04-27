@@ -16,8 +16,9 @@ class Search extends React.Component {
 
   loadComponent() {
     import('./text.js').then((text) => {
+      console.log(text.default)
       this.setState({
-        Text: Text.default,
+        Text: text.default,
       });
     });
   }
